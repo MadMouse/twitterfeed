@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                                    style="@style/AppTheme.CardView">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/postContainer"
+        android:layout_width="match_parent"
+        android:padding="@dimen/card_Margin"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/postProfileImage"
+            style="@style/CardView.ProfileImage"
+            android:src="@drawable/ic_favorite_selected"
+            />
+
+        <TextView
+            android:id="@+id/postCreatedAt"
+            style="@style/CardView.Date"
+            android:layout_width="0dp"
+            android:padding="@dimen/card_Margin"
+            app:layout_constraintStart_toEndOf="@+id/postProfileImage"
+            app:layout_constraintEnd_toEndOf="@+id/postContainer"
+            android:text="Date String"/>
+
+        <TextView
+            android:id="@+id/postFullText"
+            style="@style/CardView.FullText"
+            android:layout_width="0dp"
+            android:padding="@dimen/card_Margin"
+            android:text=""
+            app:layout_constraintStart_toEndOf="@+id/postProfileImage"
+            app:layout_constraintEnd_toEndOf="@+id/postContainer"
+            app:layout_constraintTop_toBottomOf="@+id/postCreatedAt"/>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
